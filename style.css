@@ -142,3 +142,17 @@ section {
     font-weight: 700;
     color: black;
 }
+
+/* Tabell */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 450px;
+}
+
+th, td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+}
+
