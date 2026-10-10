@@ -156,3 +156,43 @@ th, td {
     border-bottom: 1px solid black;
 }
 
+/* Formulär */
+form {
+    max-width: 450px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background: darkgray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form-fel {
+    color: #a3361f;
+    font-weight: 700;
+}
+
+.not {
+    color: #66625b;
+    font-size: 1rem;
+}
