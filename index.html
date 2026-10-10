@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="app.js" defer></script>
     <title>Hundpensionatet</title>
 </head>
+
 <body>
     <header>
         <div class="rad">
@@ -23,5 +25,28 @@
             </nav>
         </div>
     </header>
+
+    <main class="rad">
+        <section>
+            <h1>Hundpensionatet Tassen</h1>
+            <p class="intro">Tassen är ett litet hunddagis och pensionat strax utanför stan för dig som vill att hunden
+                ska ha det bra medan du jobbar eller är bortrest. Vi har plats för tolv hundar, två engagerade
+                hundskötare och ett stort inhägnat område utomhus där alla får springa av sig.</p>
+        </section>
+
+        <section id="oppet">
+            <h2>Öppet just nu?</h2>
+            <div class="kort statusrad">
+                <div>
+                    <p class="klocka" id="klocka">--:--:--</p>
+                    <p id="datum"></p>
+                </div>
+                <div>
+                    <p id="oppet-status" class="status" role="status">Laddar status...</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
