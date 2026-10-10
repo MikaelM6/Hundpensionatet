@@ -196,3 +196,52 @@ button {
     color: #66625b;
     font-size: 1rem;
 }
+
+/* Bokningslista */
+.lista {
+    list-style: none;
+    padding: 0;
+    max-width: 450px;
+}
+
+.lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 0.6rem;
+}
+
+.lista button {
+  background: white;
+  color: #a3361f;
+  border: 1px solid black;
+}
+
+.empty {
+  color: #66625b;
+}
+
+/* Omdömen */
+blockquote {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+ 
+.omd p {
+  color: #66625b;
+}
+ 
+/* Sidfot */
+footer {
+  background: white;
+  border-top: 1px solid black;
+  padding: 1.5rem 0;
+}
+ 
+footer p {
+  margin: 0.2rem 0;
+}
