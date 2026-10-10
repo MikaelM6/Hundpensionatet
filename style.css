@@ -5,8 +5,8 @@
 
 body {
     margin: 0;
-    background: #faf6ef;
-    color: #2b2a28;
+    background: whitesmoke;
+    color: black;
     font-family: system-ui, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
@@ -22,7 +22,8 @@ h2 {
 }
 
 a {
-    color: white;
+    color: darkgray;
+    text-decoration: none;
 }
 
 .rad {
@@ -33,6 +34,8 @@ a {
 
 /* Header och meny */
 header {
+    position: sticky;
+    top: 0;
     background: darkgray;
     color: white;
     padding: 1rem;
