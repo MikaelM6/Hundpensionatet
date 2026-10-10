@@ -130,3 +130,15 @@ section {
   margin: 0.4rem 0 0;
   color: #66625b;
 }
+
+/* Tjänster */
+.rutnat {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.pris {
+    font-weight: 700;
+    color: black;
+}
