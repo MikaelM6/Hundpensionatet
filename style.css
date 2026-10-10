@@ -65,3 +65,25 @@ nav a {
     color: white;
     text-decoration: none;
 }
+
+/* Sektioner */
+main {
+    padding: 1.5rem 3rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+.intro {
+    font-size: 1.2rem;
+    max-width: 650px;
+}
+
+.kort {
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
