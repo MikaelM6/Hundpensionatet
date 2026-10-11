@@ -162,3 +162,54 @@ listaEl.addEventListener("click", (event) => {
 });
 
 ritaLista();
+
+// Del 3: Omdömen
+
+const omdomeTextEl = document.querySelector("#omdome-text");
+const omdomePersonEl = document.querySelector("#omdome-person");
+const nyttOmdomeKnapp = document.querySelector("#nytt-omdome");
+
+const omdomen = [
+  {
+    namn: "Karin",
+    text: "Min hund springer in genom grinden varje morgon. Det säger allt.",
+  },
+
+  {
+    namn: "Johan",
+    text: "Trygg personal som verkligen ser varje hund.",
+  },
+
+  {
+    namn: "Amina",
+    text: "Perfekt pensionat när vi var bortresta. Fick bilder varje dag.",
+  },
+
+  {
+    namn: "Lars",
+    text: "Klippkortet är smidigt och hunden kommer hem nöjd och trött.",
+  },
+
+  {
+    namn: "Stella",
+    text: "Hämtning och lämning gör att vardagen funkar för oss.",
+  },
+];
+
+let omdome = 0;
+
+function visaOmdome() {
+  let index = Math.floor(Math.random() * omdomen.length + 1);
+
+  while (omdomen.length > 1 && index === omdome) {
+    index = Math.floor(Math.random() * omdomen.length + 1);
+  }
+
+  omdome = index;
+  omdomeTextEl.textContent = omdomen[index].text;
+  omdomePersonEl.textContent = omdomen[index].namn;
+}
+
+nyttOmdomeKnapp.addEventListener("click", visaOmdome);
+
+visaOmdome();
