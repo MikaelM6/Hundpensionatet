@@ -96,3 +96,69 @@ class Bokningslista {
     this.spara();
   }
 }
+
+const bokningar = new Bokningslista("tassen-bokningar");
+
+function ritaLista() {
+  listaEl.textContent = "";
+
+  if (bokningar.lista.length === 0) {
+    const tom = document.createElement("li");
+    tom.className = "empty";
+    tom.textContent = "Du har inga förfrågningar än.";
+    listaEl.append(tom);
+    return;
+  }
+
+  bokningar.lista.forEach((item) => {
+    const li = document.createElement("li");
+    li.dataset.id = String(item.id);
+
+    const text = document.createElement("span");
+    text.textContent = `${item.hund} (${item.datum}) `;
+
+    const knapp = document.createElement("button");
+    knapp.type = "button";
+    knapp.textContent = "Avboka";
+
+    li.append(text, knapp);
+    listaEl.append(li);
+  });
+}
+
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const hund = hundEl.value.trim();
+  const datum = datumInputEl.value;
+
+  if (hund === "") {
+    felEl.textContent = "Skriv in hundens namn.";
+    hundEl.focus();
+    return;
+  }
+
+  if (datum === "") {
+    felEl.textContent = "Välj ett önskat datum.";
+    datumInputEl.focus();
+    return;
+  }
+
+  felEl.textContent = "";
+  bokningar.laggTill(hund, datum);
+  ritaLista();
+  formEl.reset();
+});
+
+listaEl.addEventListener("click", (event) => {
+  const knapp = event.target.closest("button");
+  if (!knapp) {
+    return;
+  }
+
+  const li = knapp.closest("[data-id]");
+  bokningar.taBort(Number(li.dataset.id));
+  ritaLista();
+});
+
+ritaLista();
