@@ -199,10 +199,10 @@ const omdomen = [
 let omdome = 0;
 
 function visaOmdome() {
-  let index = Math.floor(Math.random() * omdomen.length + 1);
+  let index = Math.floor(Math.random() * omdomen.length);
 
   while (omdomen.length > 1 && index === omdome) {
-    index = Math.floor(Math.random() * omdomen.length + 1);
+    index = Math.floor(Math.random() * omdomen.length);
   }
 
   omdome = index;
