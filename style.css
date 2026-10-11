@@ -22,8 +22,7 @@ h2 {
 }
 
 a {
-    color: darkgray;
-    text-decoration: none;
+    color: #2f6b4f;
 }
 
 .rad {
@@ -92,7 +91,7 @@ section {
 
 .kort {
     background: white;
-    border: 1px solid black;
+    border: 1px solid #ddd;
     border-radius: 5px;
     padding: 1rem;
 }
@@ -123,17 +122,18 @@ section {
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
 .status.open {
-    background: whitesmoke;
-    color: green;
+    background: #e0f2e6;
+    color: #1b6b3a;
 }
 
 .status.closed {
-  background: whitesmoke;
-  color: red;
+  background: #fbe5e0;
+  color: #a3361f;
 }
 
 #nasta {
@@ -198,7 +198,7 @@ button {
 }
 
 #form-fel {
-    color: red;
+    color:  #a3361f;
     font-weight: 700;
 }
 
@@ -227,8 +227,8 @@ button {
 
 .lista button {
   background: white;
-  color: red;
-  border: 1px solid black;
+  color: #a3361f;
+  border: 1px solid #a3361f;
 }
 
 .empty {
