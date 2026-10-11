@@ -248,3 +248,22 @@ footer {
 footer p {
   margin: 0.2rem 0;
 }
+
+/* Mobil */
+@media (max-width: 700px) {
+  .rutnat {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .lista button {
+    width: auto;
+  }
+}
