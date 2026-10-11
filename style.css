@@ -120,13 +120,13 @@ section {
 }
 
 .status.open {
-    background: #e0f2e6;
-    color: #1b6b3a;
+    background: whitesmoke;
+    color: green;
 }
 
 .status.closed {
-  background: #fbe5e0;
-  color: #a3361f;
+  background: whitesmoke;
+  color: red;
 }
 
 #nasta {
@@ -191,7 +191,7 @@ button {
 }
 
 #form-fel {
-    color: #a3361f;
+    color: red;
     font-weight: 700;
 }
 
@@ -220,7 +220,7 @@ button {
 
 .lista button {
   background: white;
-  color: #a3361f;
+  color: red;
   border: 1px solid black;
 }
 
