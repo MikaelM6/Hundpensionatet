@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background: whitesmoke;
+    background: #faf6ef;
     color: black;
     font-family: system-ui, sans-serif;
     font-size: 1rem;
@@ -36,7 +36,7 @@ a {
 header {
     position: sticky;
     top: 0;
-    background: darkgray;
+    background:  #2f6b4f;
     color: white;
     padding: 1rem;
 }
@@ -183,7 +183,7 @@ button {
     padding: 0.7rem 1.2rem;
     font-size: 1rem;
     font-weight: 700;
-    background: darkgray;
+    background: #2f6b4f;
     color: white;
     border: none;
     border-radius: 5px;
