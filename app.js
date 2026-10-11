@@ -171,32 +171,32 @@ const nyttOmdomeKnapp = document.querySelector("#nytt-omdome");
 
 const omdomen = [
   {
-    namn: "Karin",
+    namn: "Karin, ägare till Molly",
     text: "Min hund springer in genom grinden varje morgon. Det säger allt.",
   },
 
   {
-    namn: "Johan",
+    namn: "Johan, ägare till Bruno",
     text: "Trygg personal som verkligen ser varje hund.",
   },
 
   {
-    namn: "Amina",
+    namn: "Amina, ägare till Sixten",
     text: "Perfekt pensionat när vi var bortresta. Fick bilder varje dag.",
   },
 
   {
-    namn: "Lars",
+    namn: "Lars, ägare till Findus",
     text: "Klippkortet är smidigt och hunden kommer hem nöjd och trött.",
   },
 
   {
-    namn: "Stella",
+    namn: "Sofia, ägare till Stella",
     text: "Hämtning och lämning gör att vardagen funkar för oss.",
   },
 ];
 
-let omdome = 0;
+let omdome = -1;
 
 function visaOmdome() {
   let index = Math.floor(Math.random() * omdomen.length);
