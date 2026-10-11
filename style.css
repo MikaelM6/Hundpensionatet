@@ -69,6 +69,13 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: #e07b00;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+
 /* Sektioner */
 main {
     padding: 1.5rem 3rem;
