@@ -4,47 +4,52 @@ const statusEl = document.querySelector("#oppet-status");
 
 // Del 1: Öppet just nu
 // Öppettider: dag (0 = söndag, 1 = måndag ... 6 = lördag)
-// Varje dag är { open, closed } i hela timmar, eller null om stängt.
+// Varje dag är { opens, closes } i hela timmar, eller null om stängt.
 const OPPETTIDER = [
-    null,                    // söndag
-    { open: 7, closed: 18 }, // måndag
-    { open: 7, closed: 18 }, // tisdag
-    { open: 7, closed: 18 }, // onsdag
-    { open: 7, closed: 18 }, // torsdag
-    { open: 7, closed: 18 }, // fredag
-    { open: 9, closed: 14 }, // lördag
+    null,                    
+    { opens: 7, closes: 18 }, 
+    { opens: 7, closes: 18 }, 
+    { opens: 7, closes: 18 }, 
+    { opens: 7, closes: 18 }, 
+    { opens: 7, closes: 18 }, 
+    { opens: 9, closes: 14 }, 
 ];
 
-function tvaSiffror(tal) {
-    return String(tal).padStart(2, "0");
+function formaTid(datum) {
+  const timme = String(datum.getHours()).padStart(2, "0");
+  const minut = String(datum.getMinutes()).padStart(2, "0");
+  const sekund = String(datum.getSeconds()).padStart(2, "0");
+  return `${timme}:${minut}:${sekund}`;
+}
+
+function arOppet(datum) {
+  const tider = OPPETTIDER[datum.getDay()];
+  if (!tider) {
+    return false;
+  }
+
+  const timme = datum.getHours();
+  return timme >= tider.opens && timme < tider.closes;
 }
 
 function uppdateraTid() {
-    const nu = new Date(); // hämtas på nytt varje gång
+  const nu = new Date();
+  const oppet = arOppet(nu);
+  const text = oppet ? "Öppet just nu" : "Stängt just nu";
 
-    // Klocka
-    const tid =
-        tvaSiffror(nu.getHours()) + ":" +
-        tvaSiffror(nu.getMinutes()) + ":" +
-        tvaSiffror(nu.getSeconds());
-    klockaEl.textContent = tid;
+  datumEl.textContent = nu.toLocaleDateString("sv-SE", {
+    weekday: "long",
+    day: "numeric",
+    month: "long"
+  });
+  klockaEl.textContent = formaTid(nu);
 
-    // Datum
-    datumEl.textContent = nu.toLocaleDateString("sv-SE", {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-    });
+  if (statusEl.textContent !== text) {
+    statusEl.textContent = text;
+  }
 
-    // Är det öppet?
-    const tider = OPPETTIDER[nu.getDay()];
-    const timme = nu.getHours();
-    const arOppet = tider !== null && timme >= tider.open && timme < tider.closed;
-
-    // 4. Visa status
-    statusEl.textContent = arOppet ? "Öppet just nu" : "Stängt just nu";
-    statusEl.classList.toggle("open", arOppet);
-    statusEl.classList.toggle("closed", !arOppet);
+  statusEl.classList.toggle("open", oppet);
+  statusEl.classList.toggle("closed", !oppet)
 }
 
 uppdateraTid();                    // kör direkt, så man slipper "Laddar..."
