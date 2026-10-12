@@ -170,6 +170,10 @@ td {
 /* Formulär */
 form {
     max-width: 450px;
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
 label {
