@@ -21,10 +21,6 @@ h2 {
     margin-top: 0;
 }
 
-a {
-    color: #2f6b4f;
-}
-
 .rad {
     max-width: 1000px;
     margin: 0 auto;
@@ -35,7 +31,7 @@ a {
 header {
     position: sticky;
     top: 0;
-    background:  #2f6b4f;
+    background: #2f6b4f;
     color: white;
     padding: 1rem;
 }
@@ -103,7 +99,7 @@ section {
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-} 
+}
 
 .klocka {
     font-size: 2.4rem;
@@ -132,13 +128,13 @@ section {
 }
 
 .status.closed {
-  background: #fbe5e0;
-  color: #a3361f;
+    background: #fbe5e0;
+    color: #a3361f;
 }
 
 #nasta {
-  margin: 0.4rem 0 0;
-  color: #66625b;
+    margin: 0.4rem 0 0;
+    color: #66625b;
 }
 
 /* Tjänster */
@@ -160,7 +156,8 @@ table {
     max-width: 450px;
 }
 
-th, td {
+th,
+td {
     text-align: left;
     padding: 1rem;
     border-bottom: 1px solid black;
@@ -198,7 +195,7 @@ button {
 }
 
 #form-fel {
-    color:  #a3361f;
+    color: #a3361f;
     font-weight: 700;
 }
 
@@ -226,51 +223,60 @@ button {
 }
 
 .lista button {
-  background: white;
-  color: #a3361f;
-  border: 1px solid #a3361f;
+    background: white;
+    color: #a3361f;
+    border: 1px solid #a3361f;
 }
 
 .empty {
-  color: #66625b;
+    color: #66625b;
 }
 
 /* Omdömen */
 blockquote {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
 }
- 
+
 .omd p {
-  color: #66625b;
+    color: #66625b;
 }
- 
+
 /* Sidfot */
 footer {
-  background: white;
-  border-top: 1px solid black;
-  padding: 1.5rem 0;
+    background: #2f6b4f;
+    color: white;
+    padding: 2rem;
 }
- 
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
 footer p {
-  margin: 0.2rem 0;
+    margin: 0.2rem 0;
 }
 
 /* Mobil */
 @media (max-width: 700px) {
-  .rutnat {
-    grid-template-columns: 1fr;
-  }
+    .rutnat {
+        grid-template-columns: 1fr;
+    }
 
-  nav a {
-    padding: 0.5rem 0;
-  }
+    nav a {
+        padding: 0.5rem 0;
+    }
 
-  button {
-    width: 100%;
-  }
+    button {
+        width: 100%;
+    }
 
-  .lista button {
-    width: auto;
-  }
+    .lista button {
+        width: auto;
+    }
+
+    .footer-rutnat {
+        grid-template-columns: 1fr;
+    }
 }
