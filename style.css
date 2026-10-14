@@ -254,16 +254,32 @@ blockquote {
 footer {
     background: #2f6b4f;
     color: white;
-    padding: 2rem;
+    padding: 2.5rem 0;
+}
+
+.footer-rutnat {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 2rem;
+}
+
+footer h2 {
+    font-size: 1.8rem;
+    margin: 0 0 0.75rem;
+}
+
+footer h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem;
+}
+
+footer p {
+    margin: 0.2rem 0;
 }
 
 footer a {
     color: white;
     text-decoration: underline;
-}
-
-footer p {
-    margin: 0.2rem 0;
 }
 
 /* Mobil */
