@@ -284,7 +284,4 @@ footer p {
         width: auto;
     }
 
-    .footer-rutnat {
-        grid-template-columns: 1fr;
-    }
 }
