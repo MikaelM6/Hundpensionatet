@@ -213,3 +213,20 @@ function visaOmdome() {
 nyttOmdomeKnapp.addEventListener("click", visaOmdome);
 
 visaOmdome();
+
+// Mobilmeny
+const menyKnappEl = document.querySelector("#meny-knapp");
+const menyEl = document.querySelector("#meny");
+
+menyKnappEl.addEventListener("click", () => {
+  const oppen = menyEl.classList.toggle("open");
+  menyKnappEl.setAttribute("aria-expanded", String(oppen));
+});
+
+// Stäng menyn när man har klickat på en länk
+menyEl.addEventListener("click", (event) => {
+  if (event.target.closest("a")) {
+    menyEl.classList.remove("open");
+    menyKnappEl.setAttribute("aria-expanded", "false");
+  }
+});

@@ -282,14 +282,18 @@ footer a {
     text-decoration: underline;
 }
 
+.meny-knapp {
+    display: none;
+}
+
 /* Mobil */
 @media (max-width: 700px) {
     .rutnat {
         grid-template-columns: 1fr;
     }
 
-    nav a {
-        padding: 0.5rem 0;
+    .footer-rutnat {
+        grid-template-columns: 1fr;
     }
 
     button {
@@ -300,4 +304,38 @@ footer a {
         width: auto;
     }
 
+    .meny-knapp {
+        display: flex;
+        width: auto;
+        background: white;
+        color: #2f6b4f;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.open {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.35rem;
+        padding-top: 1rem;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+
+    nav a:hover {
+        background: white;
+        color: #2f6b4f;
+        text-decoration: none;
+    }
 }
