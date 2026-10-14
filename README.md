@@ -28,4 +28,4 @@ Jag använder `this` i klassen `Bokningslista`, till exempel i metoden `taBort(i
 
 ## Användning av AI
 
-Jag har använt AI som hjälp. AI hjälpte till med namn och omdömen, texter på sidan och färgerna.
+Jag har använt AI som hjälp. AI hjälpte till med namn, omdömen, texter och färgerna på sidan.
