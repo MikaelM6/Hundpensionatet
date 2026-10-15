@@ -24,7 +24,7 @@ Jag valde `forEach` i `ritaLista()` eftersom jag vill göra något för varje bo
 
 ## Scope och this
 
-Jag använder `this` i klassen `Bokningslista`, till exempel i metoden `taBort(id)`. När jag skriver `new Bokningslista("tassen-bokningar")` skapas ett objekt, och `this` i metoderna pekar på det objektet. Därför kan `this.lista` och `this.spara()` använda objektets egen lista. I `taBort` använder jag en pilfunktion i `filter`. Den har ingen egen `this`, utan hittar variabeln `id` utanför sig själv. Det kallas lexikal scope.
+Jag använder `this` i klassen `Bokningslista`, till exempel i metoden `taBort(id)`. När jag skriver `new Bokningslista("tassen-bokningar")` skapas ett objekt, och `this` i metoderna pekar på det objektet. Därför kan metoderna använda objektets egen lista med `this.lista`. I `taBort` använder jag en pilfunktion i `filter`, som inte har någon egen `this` och hittar variabeln `id` utanför sig själv.
 
 ## Användning av AI
 
