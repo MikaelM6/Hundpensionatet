@@ -111,16 +111,16 @@
                 Vill du hellre prata direkt ringer du 0300-12 34 56.</p>
 
             <form id="bokningsform" novalidate>
-                <div>
-                    <label for="hundnamn">Hundens namn</label>
-                    <input id="hundnamn" name="hund" autocomplete="off">
-                </div>
-                <div><label for="datum-bokning">Önskat datum</label>
-                    <input id="datum-bokning" name="datum" type="date">
-                </div>
+                <label for="hundnamn">Hundens namn</label>
+                <input id="hundnamn" name="hund" autocomplete="off">
+
+                <label for="datum-bokning">Önskat datum</label>
+                <input id="datum-bokning" name="datum" type="date">
+
                 <p id="form-fel" role="alert"></p>
                 <button type="submit">Skicka förfrågan</button>
             </form>
+            
             <h3>Dina förfrågningar</h3>
             <ul class="lista" id="bokningslista" aria-live="polite"></ul>
         </section>
