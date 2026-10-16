@@ -4,7 +4,8 @@ En webbplats för hunddagis och pensionatet Tassen. Sidan visar tjänster, prise
 
 ## Så kör du projektet
 
-Öppna `index.html` i webbläsaren, eller använd Live Server i VS Code (högerklicka på `index.html` och välj *Open with Live Server*). 
+1. Öppna `index.html` i webbläsaren.
+2. Eller använd Live Server i VS Code.
 
 ## Reflektion
 
